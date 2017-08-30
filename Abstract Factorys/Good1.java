@@ -26,7 +26,7 @@ class Good1 {
     @Override
     public CarroPopular criarCarroPopular() {
       // TODO Auto-generated method stub
-      return new Focus();
+      return new Fiesta();
     }
 
   }
@@ -61,11 +61,11 @@ class Good1 {
 
   }
 
-  class Focus implements CarroPopular {
+  class Fiesta implements CarroPopular {
 
     @Override
     public void exibirInfoPopular() {
-      System.out.println("Modelo: Ford Focus SE 1.6 2017");
+      System.out.println("Modelo: Ford Fiesta SE 1.6 2017");
     }
 
   }
