@@ -6,28 +6,37 @@ public class BancoProxy implements BancoUsuarios {
 	protected String usuario, senha;
 
 	public BancoProxy(String usuario, String senha) {
+		this.quantidadeDeUsuarios = (int) (Math.random() * 100);
+		this.usuariosConectados = (int) (Math.random() * 10);
 		this.usuario = usuario;
 		this.senha = senha;
 	}
 
-  @Override
-	public String getNumeroDeUsuarios() {
+	public String getNumeroDeUsuariosReal() {
 		if (temPermissaoDeAcesso()) {
 			return getNumeroDeUsuarios();
 		}
 		return null;
 	}
 
-  @Override
-  public String getUsuariosConectados() {
+  public String getUsuariosConectadosReal() {
 		if (temPermissaoDeAcesso()) {
 			return getUsuariosConectados();
 		}
 		return null;
 	}
 
-  @Override
 	private boolean temPermissaoDeAcesso() {
 		return usuario == "admin" && senha == "admin";
+	}
+
+	@Override
+	public String getNumeroDeUsuarios() {
+		return new String("Total de usuários: " + quantidadeDeUsuarios);
+	}
+
+  @Override
+	public String getUsuariosConectados() {
+		return new String("Usuários conectados: " + usuariosConectados);
 	}
 }

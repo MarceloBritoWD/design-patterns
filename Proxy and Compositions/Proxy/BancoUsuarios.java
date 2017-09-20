@@ -1,4 +1,4 @@
-public interface IBancoUsuarios {
+public interface BancoUsuarios {
 
   public String getNumeroDeUsuarios();
   public String getUsuariosConectados();
