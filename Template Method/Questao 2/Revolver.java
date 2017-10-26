@@ -7,10 +7,7 @@ public class Revolver extends CapitalStrategy {
 	
 	@Override
 	public double capital(Loan loan){
-		return (loan.outstandingRiskAmount() * duration(loan) * riskFactorFor(loan))
-				
-				+
-				
-				(loan.unusedRiskAmount() * duration(loan) * unusedRiskFactor(loan));
+		return (loan.outstandingRiskAmount() * duration(loan) * riskFactorFor(loan))+
+						(loan.unusedRiskAmount() * duration(loan) * unusedRiskFactor(loan));
 	}
 }
