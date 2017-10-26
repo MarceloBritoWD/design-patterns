@@ -12,12 +12,8 @@ public abstract class CapitalStrategy {
 		return 1;
 	}
 	
-
-	private void doSomethingElse(double capital) {	
-	}
-	
-	public void templateMethod(){
-		doSomethingElse(capital(loan));
+	public double templateMethod(){
+		return capital(loan) * riskFactorFor(loan) * duration(loan);
 	}
 
 
