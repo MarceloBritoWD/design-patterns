@@ -9,3 +9,7 @@
 - Poderia ser feito com a classe Observable do java, o que não é indicado por quê queimará seu único cartucho de Herança;
 - Ou ainda, se partirmos para outras tecnologia, esse comportamento poderia ser implementado com WebSockets;
 
+
+
+### Padrão Event Aggregator
+- Pelo que entendi o Event Aggregator funciona como um Facade de eventos, no qual os Observers o assinam e os Observables o Compôe. Dessa forma, no caso de existirem varios observables no código o Event Aggregator irá diminuir o acoplamento entre Observers e Observables.
