@@ -1,4 +1,4 @@
-# Java Design patterns
+# Design Patterns
 
 ## What I learned:
 
